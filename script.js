@@ -96,7 +96,14 @@ const data = [
     "Company Name": "政大新聞系",
     "Job Title": "助理教授",
     "title": "政大新聞系／助理教授"
-  }
+  },
+  {
+    "name": "Generative AI 年會",
+    "topic": "面對撲面而來的AI巨浪，唯有人類的相互合作，才能跑得比AI還快",
+    "Company Name": "",
+    "Job Title": "",
+    "title": "2023 Generative AI 年會製作委員會"
+  },
 ]
 
 const searchParams = new URLSearchParams(window.location.search);
@@ -111,7 +118,9 @@ function typeWriter() {
   if (i < text.length) {
     subjectDom.innerHTML += text.charAt(i);
     i++;
-    setTimeout(typeWriter, 50);
+    setTimeout(typeWriter, 30);
+  } else {
+    drawAvatar();
   }
 }
 
@@ -132,5 +141,4 @@ subjectDom.innerHTML = "";
 
 window.addEventListener('obsSceneChanged', function (event) {
   setTimeout(typeWriter, 500);
-  setTimeout(drawAvatar, 1000);
 })
