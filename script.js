@@ -7,11 +7,11 @@ const data = [
     "title": "DataDecision.ai／數據科學家"
   },
   {
-    "name": "張志祺",
-    "topic": "公司導入 AI：大規模賜福的實務心得",
-    "Company Name": "簡訊設計",
-    "Job Title": "共同創辦人",
-    "title": "簡訊設計／共同創辦人"
+    "name": "薛良斌",
+    "topic": "與 AI 對話：生成人工智慧在日常生活與工作中的新契機",
+    "Company Name": "InfuseAI",
+    "Job Title": "營運長兼共同創辦人",
+    "title": "InfuseAI／營運長兼共同創辦人"
   },
   {
     "name": "林煒勛",
@@ -120,7 +120,7 @@ function typeWriter() {
     i++;
     setTimeout(typeWriter, 30);
   } else {
-    drawAvatar();
+    setTimeout(drawAvatar, 500);
   }
 }
 
@@ -129,8 +129,12 @@ function drawAvatar() {
   if (j < 5) {
     if(j == 4) {
       document.querySelector("#avatarbox img").style['display'] = "none";
+      avatarDom.style['filter'] = "blur(0px)";
+    }else if( j == 0) {
+      avatarDom.style['filter'] = "blur(50px)";
+    } else {
+      avatarDom.style['filter'] = "blur(" + (4 - j) * 7 + "px)";
     }
-    avatarDom.style['filter'] = "blur(" + (4 - j) * 7 + "px)";
     j++;
     setTimeout(drawAvatar, 500);
   }
