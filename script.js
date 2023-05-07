@@ -85,7 +85,7 @@ const data = [
   },
   {
     "name": "李慕約",
-    "topic": "商用詠唱進階 & 黑魔法防禦術 - 提升與保護你的 AI 應用",
+    "topic": "AI 語言，會溝通才有合作",
     "Company Name": "李慕約有限公司",
     "Job Title": "負責人",
     "title": "李慕約有限公司／負責人"
